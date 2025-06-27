@@ -105,5 +105,5 @@ def problem_modelacion_streamlit():
     st.write(f"Sin embargo, esto es dentro de la situación hipotetica de que {nom2} tiene ${b} pesos más, por lo que en realidad {nom2} tiene ${f} pesos.")
     st.write(f"\n\nRespuesta: {nom1} tiene ${d} pesos y {nom2} tiene ${f} pesos.")
 
-st.title("Generador de Problemas de Modelación")
+st.title("Quiz de matemáticas")
 problem_modelacion_streamlit()
