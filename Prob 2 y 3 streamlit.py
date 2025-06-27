@@ -37,7 +37,7 @@ def extend_prod_not_st():
     # Display options using radio buttons
     selected_option = st.radio(
         "Options:",
-        [opt for opt in options],
+        [latex(opt) for opt in options],
         key='prod_not_options' # Use a unique key for this widget
     )
 
