@@ -9,7 +9,6 @@ Original file is located at
 
 # prompt: genera un streamlit para usar la funcion problem_modelacion()
 
-!pip install streamlit
 
 import streamlit as st
 import random
