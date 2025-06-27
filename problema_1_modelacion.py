@@ -4,7 +4,11 @@ import streamlit as st
 preguntas = [
     ("¿Qué actividad disfrutas más?", ["Leer artículos científicos", "Pintar o dibujar", "Reparar cosas", "Ayudar a personas"]),
     ("¿Qué asignatura prefieres?", ["Matemáticas", "Arte", "Tecnología", "Psicología"]),
-    ]
+    ("¿Cómo te gusta trabajar?", ["Analizando datos", "Creando cosas nuevas", "Con herramientas", "En equipo con personas"]),
+    ("¿Qué hobby te interesa más?", ["Resolver acertijos", "Tocar un instrumento", "Armar circuitos", "Voluntariado"]),
+    ("¿Qué valoras más en un trabajo?", ["Descubrimiento", "Expresión", "Precisión", "Impacto social"]),
+    ("¿Con qué palabra te identificas más?", ["Lógico", "Creativo", "Práctico", "Empático"])
+]
 
 # --- Mapeo a perfiles ---
 perfil_map = {
@@ -50,7 +54,7 @@ if "finalizado" not in st.session_state:
     st.session_state.finalizado = False
 
 # --- Título y progreso ---
-st.title("🧭 Quiz de matemáticas")
+st.title("🧭 Test Vocacional Interactivo")
 progreso = len(st.session_state.respuestas)
 st.progress(progreso / len(preguntas))
 
@@ -76,7 +80,7 @@ if st.session_state.finalizado:
             conteo[perfil] += 1
     perfil_final = max(conteo, key=conteo.get)
 
-    st.success("✅ Quiz completado.")
+    st.success("✅ Test completado.")
     st.markdown(f"### 🔎 Tu perfil vocacional dominante es: **{perfil_final.upper()}**")
     st.info(recomendaciones[perfil_final])
 
