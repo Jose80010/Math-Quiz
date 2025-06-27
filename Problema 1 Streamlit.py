@@ -37,7 +37,7 @@ def problem_modelacion_streamlit():
     f = int(e-b)
 
   # Planteamiento del problema
-  st.write(f"{nom1} y {nom2} tienen ${a} pesos en conjunto; si al dinero de {nom2} se le sumaran ${b} pesos, entonces {nom2} tendría {rel} del dinero de {nom1}.")
+  st.write(f"{nom1} y {nom2} tienen {a} pesos en conjunto; si al dinero de {nom2} se le sumaran {b} pesos, entonces {nom2} tendría {rel} del dinero de {nom1}.")
   st.write(f"¿Cuánto dinero tienen {nom1} y {nom2} respectivamente?")
 
   # Planteamos las opciones de respuesta
@@ -48,10 +48,10 @@ def problem_modelacion_streamlit():
   r4 = random.choice([i for i in range(0,4) if i not in [r1, r2, r3]])
 
   options = [
-      f"{nom1} tiene ${d - r1} pesos y {nom2} tiene ${f + r1} pesos.",
-      f"{nom1} tiene ${d + r2} pesos y {nom2} tiene ${f - r2} pesos.",
-      f"{nom1} tiene ${d - r3} pesos y {nom2} tiene ${f + r3} pesos.",
-      f"{nom1} tiene ${d + r4} pesos y {nom2} tiene ${f - r4} pesos.",
+      f"{nom1} tiene {d - r1} pesos y {nom2} tiene {f + r1} pesos.",
+      f"{nom1} tiene {d + r2} pesos y {nom2} tiene {f - r2} pesos.",
+      f"{nom1} tiene {d - r3} pesos y {nom2} tiene {f + r3} pesos.",
+      f"{nom1} tiene {d + r4} pesos y {nom2} tiene {f - r4} pesos.",
       "Ninguna de las anteriores."
   ]
   st.write("\nOpciones de respuesta:")
@@ -90,9 +90,9 @@ def problem_modelacion_streamlit():
     elif rel == "el triple":
       st.write(f"El dinero se debe dividir en cuatro partes iguales de donde {nom1} tendrá una de ellas y {nom2} las otras tres.")
 
-    st.write(f"Dejando así que {nom1} tiene ${d} pesos y {nom2} tiene ${e} pesos.")
+    st.write(f"Dejando así que {nom1} tiene {d} pesos y {nom2} tiene {e} pesos.")
     st.write(f"Sin embargo, esto es dentro de la situación hipotetica de que {nom2} tiene ${b} pesos más, por lo que en realidad {nom2} tiene ${f} pesos.")
-    st.write(f"\n\nRespuesta: {nom1} tiene ${d} pesos y {nom2} tiene ${f} pesos.")
+    st.write(f"\n\nRespuesta: {nom1} tiene {d} pesos y {nom2} tiene {f} pesos.")
 
 st.title("Generador de Problemas de Modelación")
 problem_modelacion_streamlit()
