@@ -43,7 +43,7 @@ def extend_prod_not_st():
     )
 
     # Get the index of the selected option
-    selected_index = [st.latex(latex(opt)) for opt in options].index(selected_option)
+    selected_index = [latex(opt) for opt in options].index(selected_option)
 
     # Check the answer when a button is clicked (or automatically on change)
     # Let's use a button for clarity
