@@ -25,7 +25,7 @@ def extend_prod_not_st():
     st.latex(latex(problem))
 
     # Define options and the correct one
-    options = [latex(solution * 1), solution * (b - a), solution * a, solution * b]
+    options = [solution * 1, solution * (b - a), solution * a, solution * b]
     # Shuffle the options randomly
     random.shuffle(options)
 
