@@ -25,8 +25,8 @@ def extend_prod_not_st():
     st.latex(latex(problem))
 
     # Define options and the correct one
-    #options = [solution * 1, solution * (b - a), solution * a, solution * b]
-    options = [latex(solution * 1), latex(solution * (b - a)), latex(solution * a),latex(solution * b)]
+    options = [solution * 1, solution * (b - a), solution * a, solution * b]
+    #options = [latex(solution * 1), latex(solution * (b - a)), latex(solution * a),latex(solution * b)]
     # Shuffle the options randomly
     random.shuffle(options)
 
@@ -38,7 +38,7 @@ def extend_prod_not_st():
     # Display options using radio buttons
     selected_option = st.radio(
         "Options:",
-        [latex(opt) for opt in options],
+        [st.latex(latex(opt)) for opt in options],
         key='prod_not_options' # Use a unique key for this widget
     )
 
