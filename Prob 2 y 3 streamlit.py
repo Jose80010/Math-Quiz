@@ -5,7 +5,7 @@ import sympy as sym
 from sympy import *
 
 # Set the title of the Streamlit app
-st.title("Math Practice")
+st.title("Math Practice Quiz")
 
 a, b = sym.symbols('a, b')
 X, Y = sym.symbols('X, Y')
@@ -25,7 +25,7 @@ def extend_prod_not_st():
     st.latex(latex(problem))
 
     # Define options and the correct one
-    options = [solution * 1, solution * (b - a), solution * a, solution * b]
+    options = [latex(solution * 1), solution * (b - a), solution * a, solution * b]
     # Shuffle the options randomly
     random.shuffle(options)
 
