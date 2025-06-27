@@ -48,7 +48,7 @@ def problem_modelacion_streamlit():
     f = int(e-b)
 
   # Planteamiento del problema
-  st.write(f"{nom1} y {nom2} tienen ${a} pesos en conjunto; si al dinero de {nom2} se le sumaran ${b} pesos, entonces {nom2} tendría {rel} del dinero de {nom1}.")
+  st.write(f"{nom1} y {nom2} tienen {a} pesos en conjunto; si al dinero de {nom2} se le sumaran ${b} pesos, entonces {nom2} tendría {rel} del dinero de {nom1}.")
   st.write(f"¿Cuánto dinero tienen {nom1} y {nom2} respectivamente?")
 
   # Planteamos las opciones de respuesta
